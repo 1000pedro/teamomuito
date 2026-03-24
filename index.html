@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saudades de Você, Carolina</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Oi minha pequena, sinto sua falta.. 😞</h1>
+            <p>Passando madrugadas fazendo esse projeto, descontando lágrimas e tristezas..</p>
+        </header>
+
+        <section class="hero">
+            <div class="heart-container">
+                <div class="heart"></div>
+            </div>
+            <p class="message">Cada dia sem você uma parte do meu coração se parte.. Você é tudo para mim.</p>
+        </section>
+
+        <section class="interactions">
+            <h2>Lugarzinho para expressar sentimentos e carinho</h2>
+            <button id="sendHug">Enviar um Abraço Virtual 🤗</button>
+            <button id="sendKiss">Enviar um Beijo Virtual 😘</button>
+            <button id="sendCoconutWater">Tomar uma Água de Coco Virtual 🥥</button>
+            <button id="playFootvolley">Jogar um Futevôlei com o Pedjo ⚽ </button>
+            <button id="dinnerWithPedjo">Jantar uma Comidinha com o Pedjo 🍽️</button>
+            <button id="showLetter">Ler uma Carta de Amor 💌</button>
+            <button id="playMusic">Tocar Nossa Música 🎵</button>
+        </section>
+
+        <section class="timer">
+            <h2>Tempo que eu me apaixonei por esse rostinho lindo e olhos brilhantes</h2>
+            <p id="time-together">Carregando... ⏳</p>
+        </section>
+
+        <section class="gallery">
+            <h2>Lembranças de Nós</h2>
+            <div class="photo-grid">
+                <div class="photo" data-message="Eu te admiro tanto, essas flores combinaram tanto com vc gata.." data-img="foto12.jpeg">
+                    <img src="foto12.jpeg" alt="Lembrança 1">
+                </div>
+                <div class="photo" data-message="Primeira vez no circo, como eu te amo" data-img="foto20.jpeg">
+                    <img src="foto20.jpeg" alt="Lembrança 2">
+                </div>
+                <div class="photo" data-message="Sua felicidade me contagia, poxa" data-img="foto10.jpeg">
+                    <img src="foto10.jpeg" alt="Lembrança 3">
+                </div>
+                <div class="photo" data-message="Dois amores sonhadores, quem diria.." data-img="foto9.jpeg">
+                    <img src="foto9.jpeg" alt="Lembrança 4">
+                </div>
+                <div class="photo" data-message="Top 3 momentos que eu mais me emocionei, obrigado por ser voce" data-img="foto13.jpeg">
+                    <img src="foto13.jpeg" alt="Lembrança 5">
+                </div>
+                <div class="photo" data-message="Última noite juntos, voce estava tão linda.." data-img="foto21.jpeg">
+                    <img src="foto21.jpeg" alt="Lembrança 6">
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Para sempre, com amor, Pedjo.</p>
+        </footer>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modal-image" style="display: none; max-width: 100%; height: auto; margin-bottom: 20px; border-radius: 10px;">
+            <audio id="modal-audio" controls style="display: none; width: 100%; margin-bottom: 20px;"></audio>
+            <p id="modal-text"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

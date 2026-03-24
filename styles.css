@@ -1,0 +1,232 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 50px 0;
+}
+
+h1 {
+    font-size: 3em;
+    color: #d63384;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+header p {
+    font-size: 1.2em;
+    color: #6c757d;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.heart-container {
+    position: relative;
+    display: inline-block;
+}
+
+.heart {
+    width: 100px;
+    height: 100px;
+    background: #ff4757;
+    position: relative;
+    transform: rotate(-45deg);
+    animation: heartbeat 1.5s infinite;
+}
+
+.heart:before,
+.heart:after {
+    content: '';
+    width: 100px;
+    height: 100px;
+    background: #ff4757;
+    border-radius: 50px 50px 0 0;
+    position: absolute;
+}
+
+.heart:before {
+    top: -50px;
+    left: 0;
+    animation: breakleft 3s infinite;
+}
+
+.heart:after {
+    top: 0;
+    left: 50px;
+    animation: breakright 3s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 50%, 100% { transform: rotate(-45deg) scale(1); }
+    25% { transform: rotate(-45deg) scale(1.1); }
+}
+
+@keyframes breakleft {
+    0%, 50% { transform: translateX(0) translateY(0) rotate(0deg); background: #ff4757; }
+    100% { transform: translateX(-30px) translateY(-20px) rotate(-20deg); background: #ccc; }
+}
+
+@keyframes breakright {
+    0%, 50% { transform: translateX(0) translateY(0) rotate(0deg); background: #ff4757; }
+    100% { transform: translateX(30px) translateY(-20px) rotate(20deg); background: #ccc; }
+}
+
+.message {
+    font-size: 1.5em;
+    margin-top: 30px;
+    color: #495057;
+}
+
+.interactions {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.timer {
+    text-align: center;
+    background: rgba(255,255,255,0.45);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+.timer p {
+    font-size: 1.3em;
+    color: #d63384;
+    font-weight: 600;
+    margin: 0;
+}
+
+button {
+    background: #ff6b9d;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 1.1em;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+button:hover {
+    background: #ff4757;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.gallery {
+    padding: 50px 0;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.photo {
+    background: rgba(255,255,255,0.8);
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.photo:hover {
+    transform: scale(1.05);
+}
+
+.photo:hover {
+    transform: scale(1.05);
+}
+
+.poem {
+    text-align: center;
+    padding: 50px 0;
+    background: rgba(255,255,255,0.5);
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+.poem-content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 0;
+    color: #6c757d;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 { font-size: 2.5em; }
+    .photo-grid { grid-template-columns: 1fr; }
+    .modal-content { width: 95%; margin: 10% auto; }
+}
