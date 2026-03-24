@@ -78,6 +78,11 @@ document.getElementById('playMusic').addEventListener('click', function() {
     // Note: Add your music file as 'nossa_musica.mp3' in the project folder
 });
 
+document.getElementById('sendHearts').addEventListener('click', function() {
+    createFloatingHearts();
+    openModal('Corações voando para você, minha flor! ❤️❤️❤️');
+});
+
 // Photo interactions
 const photos = document.querySelectorAll('.photo');
 photos.forEach(photo => {
